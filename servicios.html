@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Encabezado-->
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        
+        h2 {
+            color: goldenrod;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #f0721e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #f7c02b;
+        }
+        .content {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .content img {
+            width: 100%;  /* Ocupa el 100% del contenedor */
+            max-width: 1500px; /* Máximo tamaño para que no se vea demasiado grande */
+            height: auto; /* Mantiene la proporción */
+            display: block;
+            margin: 0 auto; /* Centrar la imagen */
+        }
+    </style>
+</head>
+<body>
+   <!--Encabezado-->
+   
+    <header>
+        <div class="top-bar">
+            <span class="phone"><i class="fas fa-phone-alt"></i> (51) 982187603</span>
+        </div>
+               
+          
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Maro Logo">
+            </div>
+    
+            <div class="menu-toggle" id="mobile-menu">
+                ☰ <!-- Icono de menú sándwich -->
+            </div>
+    
+            <ul class="nav-links">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="acercade.html"> Acerca de </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="clientes.html"> Nuestros Clientes </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="servicIOS.html"> Servicios </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contactO.html">Contáctenos</a>
+                  </li>
+            </ul>
+        </nav>
+       
+    </header>
+    
+    <div class="bannertres">
+        <h1>Servicio de maquinaria</h1>
+    </div>
+    <div class="border-bottom"></div>
+
+
+ <!---------------------------------------CONTENIDO--------------------------------------------->
+
+ <p class="pauno">
+    En MARO SAC, nos especializamos en ofrecer soluciones integrales para el cuidado y
+     mantenimiento de tu vehículo, con una amplia experiencia en el sector automotriz, 
+     ponemos a tu disposición una variedad de servicios que van desde el mantenimiento
+      preventivo y correctivo hasta la reparación de motores, transmisiones y sistemas 
+      hidráulicos. Además, contamos con la venta de suministros y materiales, así como 
+      con el alquiler y venta de equipos industriales. Nuestro compromiso es brindarte un 
+      servicio de calidad, confianza y profesionalismo para asegurar el óptimo 
+      funcionamiento de tu vehículo.
+</p>
+
+
+
+<div id="m" class="content">
+    <img src="images/service1.png" alt="Montacargas de combustión">   
+</div>
+
+<div id="r" class="content">
+    <img src="images/service2.png" alt="Montacargas de combustión">
+</div>
+
+<div id="v" class="content">
+    <img src="images/service3.png" alt="Montacargas de combustión">
+</div>
+
+<div id="a" class="content">
+    <img src="images/service4.png" alt="Montacargas de combustión">
+</div>
+
+
+<div class="buttons">
+    <button onclick="mostrarContenido('m')">Mantenimiento</button>
+    <button onclick="mostrarContenido('r')">Reparaciones</button>
+    <button onclick="mostrarContenido('v')">Venta de suministros</button>
+    <button onclick="mostrarContenido('a')"> Venta y alquiler de equipos</button>
+</div>
+
+<script>
+    function mostrarContenido(id) {
+        // Ocultar todos los contenidos
+        document.querySelectorAll('.content').forEach(div => {
+            div.style.display = 'none';
+        });
+
+        // Mostrar el contenido seleccionado
+        document.getElementById(id).style.display = 'block';
+    }
+
+     // Mostrar por defecto el contenido de "MANTENIMIENTO" al cargar la página
+     window.onload = function() {
+            mostrarContenido('m');
+        };
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-------
+
+
+ <div class="header">
+    <div class="background-image" id="backgroundImage"></div>
+    <h2 class="title">SERVICIO DE MAQUINARIA</h2>
+    <p class="subtitle">Ser una empresa generadora de constante valor, en crecimiento permanente...</p>
+</div>
+
+<div class="buttons">
+    <div class="button vision" onmouseover="changeBackground('vision.jpg')" onmouseout="resetBackground()">
+        <i class="icon-eye"></i> VISIÓN
+    </div>
+    <div class="button mission" onmouseover="changeBackground('mision.jpg')" onmouseout="resetBackground()">
+        <i class="icon-cog"></i> MISIÓN
+    </div>
+    <div class="button values" onmouseover="changeBackground('valores.jpg')" onmouseout="resetBackground()">
+        <i class="icon-leaf"></i> VALORES
+    </div>
+    <div class="button policy" onmouseover="changeBackground('politica.jpg')" onmouseout="resetBackground()">
+        <i class="icon-bank"></i> POLÍTICA INTEGRADA
+    </div>
+</div>
+
+
+
+<script>
+    function changeBackground(image) {
+        document.getElementById("backgroundImage").style.backgroundImage = `url('${image}')`;
+    }
+
+    function resetBackground() {
+        document.getElementById("backgroundImage").style.backgroundImage = "url('images/img3.jpg')";
+    }
+</script>
+
+
+--->
+
+
+
+
+
+
+<!--
+
+
+ <section class="logistica">
+   <h2 class="servicioh2">Alquiler de equipos de logística</h2> --> 
+   
+    <!--
+    <div class="cards-container">
+        <div class="cardsservicio">
+            <img src="images/img1.png" alt="Montacargas de combustión">
+            <h3 class="servicioh3">MANTENIMIENTO</h3>
+            <p class="pa">
+                - Mantenimiento predictivo: Mediante análisis de aceites, detecta desgastes internos en motor, caja, corona y sistema hidráulico. Se basa en el monitoreo de variables físicas para prever fallas.
+                <br>
+                - Mantenimiento preventivo: Consiste en la programación de mantenimientos (MP1, MP2, MP3 y MP4) para prevenir daños y prolongar la vida útil de los componentes.
+                <br>
+                - Mantenimiento correctivo: Se realiza según las especificaciones del fabricante y el historial de mantenimientos preventivos, evitando fallas imprevistas.
+            </p>
+        </div>
+        <div class="cardsservicio">
+            <img src="images/img2.jpg" alt="Montacargas eléctrico">
+            <h3 class="servicioh3">REPARACIONES DE MOTORES, TRANSMISIONES Y CORONAS, DE TODAS LAS MARCAS</h3>
+            <p class="pa">
+                - Reparación de motores: Soluciona problemas de baja compresión en motores de combustión interna mediante análisis y gestión de fallas. <br>
+               - Reparación de transmisiones: Recupera la fuerza de la máquina en marchas adelante y atrás, reemplazando sellos hidráulicos, conectores y selenoides. <br>
+               - Reparación de diferencial: Corrige desniveles en las llantas cuando una gira más que la otra. <br>
+               - Marcas atendidas: Caterpillar, Nissan, Hyundai, Toyota, entre otras.
+
+            </p>
+        </div>
+        <div class="cardsservicio">
+            <img src="images/img3.jpg" alt="Transpaletas">
+            <h3 class="servicioh3">MANTENIEMIENTO, REPARACIÓN Y ADAPTACIONES DE SISTEMAS HIDRAÚLICOS
+            </h3>
+            <p class="pa">Se realiza el mantenimiento para evitar fugas e inconvenientes con los sistemas hidraulicos. Los sistemas hidráulicos se reparan,
+                 cuando hay fugas internas, perdidas de presión o fugas de aceite hidráulico. Se reparan mástiles, carreajes, pistones, puentes de dirección, orbitrales, 
+                 controles de válvulas y bombas hidráulicas. En cuanto a adaptaciones, se realiza cuando los equipos tienes sistemas incompletos o cuando el cliente quiere
+                  adaptar un sistema hidráulico.
+
+            </p>
+        </div>
+        <div class="cardsservicio">
+            <img src="images/img4.png" alt="Montacargas de combustión">
+            <h3 class="servicioh3">VENTA DE SUMINISTROS Y MATERIALES
+            </h3>
+            <p class="pa">
+                Aceites
+                Tenemos una gama de marcas de aceites con garantia y calidad única.
+                Filtros
+                Tenemos una variedad de marcas tanto como originales y alternativos de buena calidad y con garantía.
+                Repuestos y Accesorios
+                 Contamos con un stock de repuestos tanto originales como alternativos.
+            </p>
+        </div>
+        <div class="cardsservicio">
+            <img src="images/img5.png" alt="Montacargas eléctrico">
+            <h3 class="servicioh3">ALQUILER Y VENTA DE MONTACARGAS Y EQUIPOS INDUSTRIALES
+            </h3>
+            <p class="pa">
+                Alquilamos y vendemos maquinas a precios asequibles; también si los correctivos o reparaciones superan los 3 días, se alquilaria a un costo minimo, 
+                puesto que sus máquinas se encuentran en reparación.
+                <br>
+                Apilador Eléctrico
+                <br>
+                Estoca
+                <br>
+                Montacarga
+                <br>
+                Carretilla Hidráulica
+
+            </p>
+        </div>
+    </div>-->
+<!--</section> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+ <!------------------------------PIE DE PÁGINA--------------------------------->
+ <footer>
+  <div class="footer-container">
+      <div class="footer-logo">
+          <img src="images/logo.png" alt="Triton Logo">
+          <p>En Trucks Elmaro Diesel S.A.C., aseguramos un servicio de confianza, eficacia y garantía, manteniendo siempre altos estándares de calidad y compromiso en cada trabajo.</p>
+      </div>
+
+      <div class="footer-info">
+          <div class="office">
+              <h3>OFICINA PRINCIPAL:</h3>
+              <p><strong>Lima</strong></p>
+              <p>MZ D Lt 4 A.A.H.H 1ero Mayo - San Juan de Lurigancho, Lima - Perú</p>
+              <p><strong>Cel:</strong> <b>+51 982187603</b></p>
+          </div>
+
+          
+      </div>
+
+      <div class="social-icons">
+          <a href="https://www.facebook.com/p/trucks-el-maro-diesel-sac-61562146088310/?mibextid=ZbWKwL" target="_blank">
+              <img src="images/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/TU_USUARIO" target="_blank">
+              <img src="images/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/@TU_USUARIO" target="_blank">
+              <img src="images/tiktok.png" alt="TikTok">
+          </a>
+      </div>
+      
+  </div>
+
+ 
+  <!-- Botón de WhatsApp flotante -->
+  <a href="https://api.whatsapp.com/send?phone=51982187603&text=Hola%20, somos Trucks ElMaro%20sean%20bienvenidos!😊" class="whatsapp-float" target="_blank">
+      <img src="images/whatsapp.png" alt="WhatsApp">
+  </a>
+</footer>
+
+
+<div class="franja-piepagina">
+  <p>TRUCKS EL MARO © 2025 Confianza, eficacia y garantía</p>
+</div>
+
+
+
+
+ 
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Encabezado-->
+    <link rel="stylesheet" href="estilo.css">
+   
+</head>
+<body>
+   <!------------------------------Encabezado--------------------------------->
+   
+    <header>
+        <div class="top-bar">
+            <span class="phone"><i class="fas fa-phone-alt"></i> (51) 982187603 </span>
+        </div>
+               
+          
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Maro Logo">
+            </div>
+    
+            <div class="menu-toggle" id="mobile-menu">
+                ☰ <!-- Icono de menú sándwich -->
+            </div>
+    
+            <ul class="nav-links">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="acercade.html"> Acerca de </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="clientes.html"> Nuestros Clientes </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="servicIOS.html"> Servicios </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contactO.html">Contáctenos</a>
+                  </li>
+            </ul>
+        </nav>
+       
+    </header>
+    
+    <div class="banner">
+        <h1>Servicio de maquinaria</h1>
+    </div>
+    <div class="border-bottom"></div>
+
+  <!--
+    <div class="franja">
+        <h1>NUESTRAS MARCAS</h1>
+    </div>-->
+
+
+
+
+
+
+
+
+     <!--------------------------------------TODO EL CUERPO Y CONTENIDO DE LA PÁGINA ------------------------------------------------->
+    <div class="main-content">
+        <h1 class="title">
+            MANTENIMIENTO, ALQUILER Y VENTA DE SISTEMAS HIDRÁULICOS
+        </h1>
+        <p class="paragraph">
+            Somos especialistas en mantenimiento y reparación de maquinaria pesada, ofreciendo soluciones integrales para maximizar la operatividad de tus equipos.
+            En Trucks Elmaro Diesel S.A.C., nos enfocamos en brindar un servicio técnico de alta calidad para motores de combustión, transmisiones mecánicas y automáticas, así como sistemas hidráulicos y eléctricos. También contamos con soporte especializado en sistemas a gas y realizamos mantenimientos preventivos, predictivos y correctivos para garantizar el máximo rendimiento de cada equipo.
+            Trabajamos con más de 17 marcas y una amplia variedad de maquinarias, adaptándonos a las necesidades de los sectores minero, construcción, logístico, industrial y portuario. Nuestro objetivo es reducir costos de mantenimiento y evitar paradas inesperadas, asegurando el mejor desempeño en cada operación.
+        </p>
+    </div>
+
+  
+<!-------------------------------------------CARDS--------------------------------------------------->
+
+<div class="cardsgeneral">
+    <!-- Cuadro 1 -->
+    <div class="card">
+        <img src="images/mantenimiento.jpg" alt="Crown">
+        <h2>MANTENIMIENTO</h2>
+        <p>Mantenimiento predictivo, mantenimiento preventivo y mantenimiento correctivo.</p>
+        
+    </div>
+
+    <!-- Cuadro 2 -->
+    <div class="card">
+        <img src="images/sistemas.jpg" alt="Liebherr">
+        <h2>SISTEMAS HIDRÁULICOS</h2>
+        <p>Mantenimiento, reparación y adaptación de sistemas hidraúlicos.</p>
+        
+    </div>
+
+    <!-- Cuadro 3 -->
+    <div class="card">
+        <img src="images/montacargas.jpg" alt="Bobcat">
+        <h2>MONTACARGAS Y EQUIPOS INDUSTRIALES</h2>
+        <p>Alquiler y venta de montacargas y equipos industriales.</p>
+       
+    </div>
+
+    <!-- Cuadro 4 -->
+    <div class="card">
+        <img src="images/reparaciones.jpg" alt="CAT">
+        <h2>REPARACIONES</h2>
+        <p>Reparaciones de motores, transmisiones (mecánica y automática) y de diferencial (corona) en diferentes marcas.</p>
+        
+    </div>
+
+    <!-- Cuadro 5 -->
+    <div class="card">
+        <img src="images/venta.jpg" alt="Volvo">
+        <h2>VENTA DE SUMINISTROS</h2>
+        <p>Equipos de calidad para el sector minero y de construcciónVentas de aceites, filtros y respuestos y accesorios.</p>
+       <!-- <a href="#" class="button">VER EQUIPOS</a>-->
+    </div>
+</div>
+
+
+    <div class="carrusel">
+        <h1></h1>
+    </div>
+
+    <script>
+        const imagenes = [
+            "images/ban1.png",
+            "images/ban2.png",
+            "images/ban3.png"
+        ];
+        
+        let index = 0;
+    
+        function cambiarFondo() {
+            index = (index + 1) % imagenes.length;
+            document.querySelector('.carrusel').style.background = `url('${imagenes[index]}') center/cover no-repeat`;
+        }
+    
+        setInterval(cambiarFondo, 3000); // Cambia cada 3 segundos
+    </script>
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+ <!------------------------------PIE DE PÁGINA--------------------------------->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Triton Logo">
+                <p>En Trucks Elmaro Diesel S.A.C., aseguramos un servicio de confianza, eficacia y garantía, manteniendo siempre altos estándares de calidad y compromiso en cada trabajo.</p>
+            </div>
+    
+            <div class="footer-info">
+                <div class="office">
+                    <h3>OFICINA PRINCIPAL:</h3>
+                    <p><strong>Lima</strong></p>
+                    <p>MZ D Lt 4 A.A.H.H 1ero Mayo - San Juan de Lurigancho, Lima - Perú</p>
+                    <p><strong>Cel:</strong> <b>+51 982187603</b></p>
+                </div>
+    
+                
+            </div>
+    
+            <div class="social-icons">
+                <a href="https://www.facebook.com/p/trucks-el-maro-diesel-sac-61562146088310/?mibextid=ZbWKwL" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/TU_USUARIO" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.tiktok.com/@TU_USUARIO" target="_blank">
+                    <img src="images/tiktok.png" alt="TikTok">
+                </a>
+            </div>
+            
+        </div>
+    
+       
+        <!-- Botón de WhatsApp flotante -->
+        <a href="https://api.whatsapp.com/send?phone=51982187603&text=Hola%20, somos Trucks ElMaro%20sean%20bienvenidos!😊" class="whatsapp-float" target="_blank">
+            <img src="images/whatsapp.png" alt="WhatsApp">
+        </a>
+    </footer>
+    
+
+    <div class="franja-piepagina">
+        <p>TRUCKS EL MARO © 2025 Confianza, eficacia y garantía</p>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+</html>

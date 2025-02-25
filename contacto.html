@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Encabezado-->
+    <link rel="stylesheet" href="estilo.css">
+   
+</head>
+<body>
+   <!--Encabezado-->
+   
+    <header>
+        <div class="top-bar">
+            <span class="phone"><i class="fas fa-phone-alt"></i> (51) 982187603</span>
+        </div>
+               
+          
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Maro Logo">
+            </div>
+    
+            <div class="menu-toggle" id="mobile-menu">
+                ☰ <!-- Icono de menú sándwich -->
+            </div>
+    
+            <ul class="nav-links">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="acercade.html"> Acerca de </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="clientes.html"> Nuestros Clientes </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="servicIOS.html"> Servicios </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contactO.html">Contáctenos</a>
+                  </li>
+            </ul>
+        </nav>
+       
+    </header>
+    
+    <div class="bannercinco">
+        <h1>Contáctenos</h1>
+    </div>
+    <div class="border-bottom"></div>
+
+
+ <!---------------------------------------CONTENIDO--------------------------------------------->
+
+ <div class="containercontacto">
+    <!-- Sección del formulario -->
+    <div class="formulario">
+        <h2>📩 Escríbenos</h2>
+        <br>
+        <p>Si estás interesado en nuestras maquinarias o servicios, completa el formulario.</p>
+        <form id="contactForm">
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="apellido" placeholder="Apellido" required>
+            <input type="email" id="correo" placeholder="Correo electrónico" required>
+            <input type="tel" id="telefono" placeholder="Teléfono" required>
+            <input type="text" id="ruc" placeholder="RUC">
+            <textarea id="mensaje" placeholder="Mensaje" rows="4" required></textarea>
+           
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Sección de contacto -->
+    <div class="contacto">
+        <h2 class="contact">📍 Encuéntranos</h2>
+        <div class="oficina">
+            <br>
+            <h3 class="contact2">Lima</h3>
+            <br>
+            <p class="contact3">MZ D Lt 4 A.A.H.H 1ero Mayo - San Juan de Lurigancho</p>
+            <br>
+            <p class="contact3"><strong>Cel.:</strong> <span class="resaltado">+51 982 187 603</span></p>
+        </div>
+        <br>
+        <div class="mapa">
+            <h2>📍 Nuestra Ubicación</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d975.0074530892972!2d-76.94296368471075!3d-12.178373537846017!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b918ef6f95b3%3A0x7e56d7760da768cb!2sPje.%20Concordia%2C%20Villa%20Mar%C3%ADa%20del%20Triunfo%2015817!5e0!3m2!1ses-419!2spe!4v1740289249155!5m2!1ses-419!2spe" width="420" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<br>
+<script>
+    // Inicializa EmailJS con tu clave pública
+    emailjs.init("EzD9KBnvDt7ZFFsMu"); // Reemplázalo con tu clave real
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Evita la recarga de la página
+
+        // Limpia el formulario inmediatamente al hacer clic en "Enviar"
+        document.getElementById("contactForm").reset();
+
+        // Captura los datos del formulario
+        const templateParams = {
+            nombre: document.getElementById("nombre").value,
+            apellido: document.getElementById("apellido").value,
+            correo: document.getElementById("correo").value,
+            telefono: document.getElementById("telefono").value,
+            ruc: document.getElementById("ruc").value,
+            mensaje: document.getElementById("mensaje").value
+        };
+
+        console.log("Enviando datos a EmailJS:", templateParams);
+
+        // Envía los datos con EmailJS sin esperar respuesta
+        emailjs.send("service_gi8dn24", "template_4soivno", templateParams)
+            .then(response => {
+                console.log("Mensaje enviado con éxito:", response);
+                document.getElementById("statusMessage").textContent = "✅ Mensaje enviado con éxito!";
+                document.getElementById("statusMessage").style.color = "green";
+            })
+            .catch(error => {
+                console.error("Error al enviar el mensaje:", error);
+                document.getElementById("statusMessage").textContent = "❌ Error al enviar el mensaje.";
+                document.getElementById("statusMessage").style.color = "red";
+            });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+ <!------------------------------PIE DE PÁGINA--------------------------------->
+ <footer>
+  <div class="footer-container">
+      <div class="footer-logo">
+          <img src="images/logo.png" alt="Triton Logo">
+          <p>En Trucks Elmaro Diesel S.A.C., aseguramos un servicio de confianza, eficacia y garantía, manteniendo siempre altos estándares de calidad y compromiso en cada trabajo.</p>
+      </div>
+
+      <div class="footer-info">
+          <div class="office">
+              <h3>OFICINA PRINCIPAL:</h3>
+              <p><strong>Lima</strong></p>
+              <p>MZ D Lt 4 A.A.H.H 1ero Mayo - San Juan de Lurigancho, Lima - Perú</p>
+              <p><strong>Cel:</strong> <b>+51 982187603</b></p>
+          </div>
+
+          
+      </div>
+
+      <div class="social-icons">
+          <a href="https://www.facebook.com/p/trucks-el-maro-diesel-sac-61562146088310/?mibextid=ZbWKwL" target="_blank">
+              <img src="images/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/TU_USUARIO" target="_blank">
+              <img src="images/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/@TU_USUARIO" target="_blank">
+              <img src="images/tiktok.png" alt="TikTok">
+          </a>
+      </div>
+      
+  </div>
+
+ 
+  <!-- Botón de WhatsApp flotante -->
+  <a href="https://api.whatsapp.com/send?phone=51982187603&text=Hola%20, somos Trucks ElMaro%20sean%20bienvenidos!😊" class="whatsapp-float" target="_blank">
+      <img src="images/whatsapp.png" alt="WhatsApp">
+  </a>
+</footer>
+
+
+<div class="franja-piepagina">
+  <p>TRUCKS EL MARO © 2025 Confianza, eficacia y garantía</p>
+</div>
+
+
+
+
+
+</body>
+</html>

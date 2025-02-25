@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Encabezado-->
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        
+
+        h2 {
+            text-align: center;  /* Centrar el texto */
+            color: #b37417;
+            font-size: 28px;     /* Ajustar el tamaño de la fuente */
+            font-weight: bold;   /* Hacer el texto más grueso */
+            margin-top: 20px;    /* Espaciado superior */
+        }
+
+
+        .carruselsocio-container {
+            overflow: hidden;
+            width: 80%; /* Ajusta según sea necesario */
+            margin: auto;
+            position: relative;
+        }
+
+        .carruselsocio {
+            display: flex;
+            gap: 30px;
+            animation: deslizar 10s linear infinite;
+        }
+
+        .carruselsocio img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        @keyframes deslizar {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Duplicamos el contenido para que el carrusel sea continuo */
+        .carrusel-wrapper {
+            display: flex;
+            width: 200%;
+        }
+
+
+
+        .testimonios {
+            background: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .testimonios-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .testimonio {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .testimonio img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .stars {
+            color: gold;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+   <!--Encabezado-->
+   
+    <header>
+        <div class="top-bar">
+            <span class="phone"><i class="fas fa-phone-alt"></i> (51) 982187603</span>
+        </div>
+               
+          
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Maro Logo">
+            </div>
+    
+            <div class="menu-toggle" id="mobile-menu">
+                ☰ <!-- Icono de menú sándwich -->
+            </div>
+    
+            <ul class="nav-links">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only"></span></a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="acercade.html"> Acerca de </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="clientes.html"> Nuestros Clientes </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="servicIOS.html"> Servicios </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contactO.html">Contáctenos</a>
+                  </li>
+            </ul>
+        </nav>
+       
+    </header>
+    
+    <div class="bannercuatro">
+        <h1>Nuestros fieles clientes</h1>
+    </div>
+    <div class="border-bottom"></div>
+
+
+
+ <!---------------------------------------CONTENIDO--------------------------------------------->
+
+
+
+ <h2>Socios Estratégicos</h2>
+
+ <br>
+ <div class="carruselsocio-container">
+    <div class="carruselsocio-wrapper">
+        <div class="carruselsocio">
+        <img src="images/marca1.png" alt="Socio 1">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="images/marca2.png" alt="Socio 2">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="images/marca3.png" alt="Socio 3">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="images/marca4.png" alt="Socio 4">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="images/marca5.png" alt="Socio 5">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="images/marca6.png" alt="Socio 6">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="images/marca1.png" alt="Socio 1">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="images/marca2.png" alt="Socio 2">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="images/marca3.png" alt="Socio 3">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="images/marca4.png" alt="Socio 4">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="images/marca5.png" alt="Socio 5">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="images/marca6.png" alt="Socio 6">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        </div>
+
+       
+    </div>
+</div>
+
+
+    <div class="testimonios">
+        <h2>Testimonios</h2>
+        <br>
+        <div class="testimonios-container">
+            <div class="testimonio">
+                <img src="images/user1.png" alt="Cliente 1">
+                <div class="stars">★★★★★</div>
+                <p>Confío en Trucks El Maro para el mantenimiento de mi flota de camiones. Su equipo es altamente profesional y siempre entregan un servicio impecable. Gracias a ellos, mis vehículos están en óptimas condiciones y listos para cualquier trabajo pesado.</p>
+            </div>
+
+            <div class="testimonio">
+                <img src="images/user2.png" alt="Cliente 2">
+                <div class="stars">★★★★★</div>
+                <p>La reparación de motores y transmisiones que ofrecen es de primera calidad. Mi camión tuvo un problema en la transmisión y en menos de 48 horas lo tenían funcionando como nuevo. Servicio rápido, eficiente y confiable.</p>
+            </div>
+
+            <div class="testimonio">
+                <img src="images/user3.png" alt="Cliente 3">
+                <div class="stars">★★★★★</div>
+                <p>No solo realizan un excelente mantenimiento, sino que también cuentan con una gran variedad de suministros y equipos industriales. Encontré todo lo que necesitaba para mi empresa en un solo lugar. 100% recomendados.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+ <!------------------------------PIE DE PÁGINA--------------------------------->
+ <footer>
+  <div class="footer-container">
+      <div class="footer-logo">
+          <img src="images/logo.png" alt="Triton Logo">
+          <p>En Trucks Elmaro Diesel S.A.C., aseguramos un servicio de confianza, eficacia y garantía, manteniendo siempre altos estándares de calidad y compromiso en cada trabajo.</p>
+      </div>
+
+      <div class="footer-info">
+          <div class="office">
+              <h3>OFICINA PRINCIPAL:</h3>
+              <p><strong>Lima</strong></p>
+              <p>MZ D Lt 4 A.A.H.H 1ero Mayo - San Juan de Lurigancho, Lima - Perú</p>
+              <p><strong>Cel:</strong> <b>+51 982187603</b></p>
+          </div>
+
+          
+      </div>
+
+      <div class="social-icons">
+          <a href="https://www.facebook.com/p/trucks-el-maro-diesel-sac-61562146088310/?mibextid=ZbWKwL" target="_blank">
+              <img src="images/facebook.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/TU_USUARIO" target="_blank">
+              <img src="images/instagram.png" alt="Instagram">
+          </a>
+          <a href="https://www.tiktok.com/@TU_USUARIO" target="_blank">
+              <img src="images/tiktok.png" alt="TikTok">
+          </a>
+      </div>
+      
+  </div>
+
+ 
+  <!-- Botón de WhatsApp flotante -->
+  <a href="https://api.whatsapp.com/send?phone=51982187603&text=Hola%20, somos Trucks ElMaro%20sean%20bienvenidos!😊" class="whatsapp-float" target="_blank">
+      <img src="images/whatsapp.png" alt="WhatsApp">
+  </a>
+</footer>
+
+
+<div class="franja-piepagina">
+  <p>TRUCKS EL MARO © 2025 Confianza, eficacia y garantía</p>
+</div>
+
+
+
+
+
+</body>
+</html>
